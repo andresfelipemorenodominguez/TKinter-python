@@ -24,3 +24,17 @@ def calcular():
     except:
         entrada.delete(0, tk.END)  # Borra la entrada en caso de error
         entrada.insert(0, "Error")  # Muestra mensaje de error
+
+ventana = tk.Tk()  # Crea la ventana principal
+ventana.title("Calculadora")  # Título de la ventana
+ventana.geometry("300x400")  # Tamaño de la ventana
+
+entrada = tk.Entry(centana, width=20, font=("Arial", 18),justify="right")  # Campo de entrada para la calculadora
+entrada.grid(row=0, column=0, columnspan=4, padx=10, pady=10)  # Posiciona la entrada en la cuadrícula  
+
+botones = [
+    ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3),
+    ('4', 2, 0), ('5', 2, 1), ('6', 2, 2), ('*', 2, 3),
+    ('1', 3, 0), ('2', 3, 1), ('3', 3, 2), ('-', 3, 3),
+    ('0', 4, 0), ('.', 4, 1), ('C', 4, 2), ('+', 4, 3),
+] # Lista de botones con sus posiciones
