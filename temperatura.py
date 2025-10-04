@@ -19,4 +19,15 @@ def convertirafarenheit():
 
 botonf = tk.Button(ventana, text="Convertir a Farenheit", command=convertirafarenheit)
 botonf.pack(pady=20)
+
+def convertiracelsius():
+    valor = entrada_grados.get()           
+    try:
+        celsius = (float(valor) - 32) * 5 / 9
+        print(celsius)
+    except ValueError:
+        print("Ingresa un número válido")
+
+botonc = tk.Button(ventana, text="Convertir a celsius", command=convertiracelsius)
+botonc.pack(pady=20)
 ventana.mainloop()
