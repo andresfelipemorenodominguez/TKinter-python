@@ -2,7 +2,7 @@ import tkinter as tk
 
 root = tk.Tk()
 root.title("lista")
-root.geometry("400x400")
+root.geometry("400x450")
 
 lista=tk.Listbox(root, width=40, height=20)
 lista.pack(pady=10, padx=10)
